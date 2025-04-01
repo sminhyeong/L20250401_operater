@@ -45,7 +45,7 @@ int Div(int Num1, int Num2)
 
 float Div(float Num1, float Num2)
 {
-	if (Num2 == 0) return -1;
+	if (Num2 == 0) return -1.0f;
 	return Num1 / Num2;
 }
 
@@ -54,13 +54,27 @@ int main()
 {
 	int Number1 = 10;
 	int Number2 = 4;
-	cout << Add(Number1, Number2) << endl;
+
+	/*cout << Add(Number1, Number2) << endl;
 	cout << Sub(Number1, Number2) << endl;
 	cout << Mul(Number1, Number2) << endl;
 	cout << Div(Number1, Number2) << endl;
+
 	cout << Add((float)Number1, (float)Number2) << endl;
 	cout << Sub((float)Number1, (float)Number2) << endl;
 	cout << Mul((float)Number1, (float)Number2) << endl;
-	cout << Div((float)Number1, (float)Number2) << endl;
+	cout << Div((float)Number1, (float)Number2) << endl;*/
+	bool a = Number2 !=0 ? true : false;
+
+	cout << (Number1 + Number2) << endl;
+	cout << (Number1 - Number2) << endl;
+	cout << (Number1 * Number2) << endl;
+	cout << (Number2 != 0 ? Number1 / Number2 : -1)<< endl;
+
+	cout << ((float)Number1 + (float)Number2) << endl;
+	cout << ((float)Number1 - (float)Number2) << endl;
+	cout << ((float)Number1 * (float)Number2) << endl;
+	cout << (Number2 != 0.f ? (float)Number1 / (float)Number2:-1.f) << endl;
+
 	return 0;
 }
